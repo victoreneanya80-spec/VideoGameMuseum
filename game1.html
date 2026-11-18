@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris | The Video Game Museum</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Tetris</h1>
+    <p class="tagline">Exhibit Hall 1 &middot; The puzzle that conquered the world</p>
+  </header>
+  <main>
+    <div class="art art-blocks" id="blocks"></div>
+
+    <dl class="plaque">
+      <dt>Released</dt><dd>1984</dd>
+      <dt>Creator</dt><dd>Alexey Pajitnov</dd>
+      <dt>Genre</dt><dd>Puzzle</dd>
+      <dt>Famous version</dt><dd>Nintendo Game Boy (1989)</dd>
+    </dl>
+
+    <h2>About the Game</h2>
+    <p>Tetris was created by Soviet software engineer Alexey Pajitnov in 1984 while he was working at a computer research center in Moscow. Shapes made of four squares fall from the top of a well, and the player rotates and slides them so they form complete horizontal lines. Each completed line disappears, and the game speeds up as you go.</p>
+    <p>The name combines "tetra," the Greek prefix for four, with tennis, Pajitnov's favorite sport.</p>
+
+    <h2>Why It Belongs in the Museum</h2>
+    <ul class="facts">
+      <li>Its rules fit in one sentence, yet it can be played for a lifetime.</li>
+      <li>Bundled with the Game Boy in 1989, it helped turn handheld gaming into a mass market.</li>
+      <li>It has been released on almost every gaming platform ever made.</li>
+      <li>There are exactly seven pieces, called tetrominoes: I, O, T, S, Z, J and L.</li>
+    </ul>
+
+    <a class="back" href="index.html">&larr; Back to the Museum Lobby</a>
+  </main>
+  <footer>The Video Game Museum &middot; CSCI 4018 Final Lab Set 2</footer>
+  <script>
+    // Draws a simple random block pattern in the banner (no external files needed).
+    var colors = ["#00f0f0", "#f0f000", "#a000f0", "#00f000", "#f00000", "#0000f0", "#f0a000", "#0d0c12"];
+    var box = document.getElementById("blocks");
+    for (var i = 0; i < 48; i++) {
+      var s = document.createElement("span");
+      s.style.background = colors[Math.floor(Math.random() * colors.length)];
+      box.appendChild(s);
+    }
+  </script>
+</body>
+</html>
